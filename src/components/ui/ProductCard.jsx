@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ product, setSelectedProduct, selectedProduct }) => {
     const [isSelected, setIsSelected] = useState(selectedProduct.some(p => p.id === product.id));
@@ -16,8 +17,14 @@ const ProductCard = ({ product, setSelectedProduct, selectedProduct }) => {
     }
 
     const handleProductSelect = () => {
-        setSelectedProduct([...selectedProduct, product]);
-        setIsSelected(true);
+        if (!isSelected) {
+            setSelectedProduct([...selectedProduct, product]);
+            setIsSelected(true);
+            toast.success("Item added to cart!");
+            return;
+        }
+
+        toast.error("Item already in cart!");
     }
 
     return (

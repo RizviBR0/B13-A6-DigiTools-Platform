@@ -2,10 +2,9 @@ import React, { use, useState } from 'react';
 import Products from './Products';
 import Cart from './Cart';
 
-const Digitools = ({ productPromise }) => {
+const Digitools = ({ productPromise, selectedProduct, setSelectedProduct }) => {
     const productData = use(productPromise);
     const [selectedTab, setSelectedTab] = useState("Products");
-    const [selectedProduct, setSelectedProduct] = useState([]);
 
     return (
         <div className='py-16 bg-white container mx-auto space-y-12'>

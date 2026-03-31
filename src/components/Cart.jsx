@@ -1,8 +1,10 @@
 import { BsCart3 } from "react-icons/bs";
+import { toast } from "react-toastify";
 
 const Cart = ({ selectedProduct, setSelectedProduct }) => {
     const handleRemoveProduct = (productId) => {
         setSelectedProduct(selectedProduct.filter(product => product.id !== productId));
+        toast.success("Item removed from cart!");
     };
 
     if (selectedProduct.length === 0) {
@@ -49,7 +51,10 @@ const Cart = ({ selectedProduct, setSelectedProduct }) => {
                 <p className='text-2xl font-bold text-[#101727]'>${selectedProduct.reduce((sum, product) => sum + product.price, 0)}</p>
             </div>
 
-            <button className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] transition-all p-4 rounded-full font-bold text-base text-white flex justify-center items-center cursor-pointer w-full shadow-lg shadow-[#4F39F6]/30 active:shadow-none duration-200' onClick={() => setSelectedProduct([])}>Proceed to Checkout</button>
+            <button className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] transition-all p-4 rounded-full font-bold text-base text-white flex justify-center items-center cursor-pointer w-full shadow-lg shadow-[#4F39F6]/30 active:shadow-none duration-200' onClick={() => {
+                setSelectedProduct([]);
+                toast.success("Checkout completed successfully!");
+            }}>Proceed to Checkout</button>
         </div>
     );
 };
