@@ -21,7 +21,7 @@ const ProductCard = ({ product, setSelectedProduct, selectedProduct }) => {
     }
 
     return (
-        <div className="card bg-white border-2 border-[#F2F2F2]">
+        <div className="card bg-white border-2 border-[#F2F2F2] hover:border-[#627382]/30 duration-200 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-[#627382]/10">
             <div className="card-body gap-4 relative">
                 <span className={`absolute top-2 right-2 text-sm font-medium px-3 py-1.5 rounded-full ${badgeStyle}`}>{product.tag}</span>
 
@@ -45,7 +45,7 @@ const ProductCard = ({ product, setSelectedProduct, selectedProduct }) => {
 
                 <div>
                     <button className={`btn text-white btn-block rounded-full border-none ${isSelected ? 'bg-green-800' : 'bg-linear-to-r from-[#4F39F6] to-[#9514FA]'}`} onClick={handleProductSelect}>
-                        {isSelected ? 'Added to Cart' : 'Buy Now'}
+                        {isSelected ? '✓ Added to Cart' : 'Buy Now'}
                     </button>
                 </div>
             </div>
