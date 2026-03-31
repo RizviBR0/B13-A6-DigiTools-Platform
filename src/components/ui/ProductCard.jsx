@@ -1,8 +1,7 @@
-import { useState } from "react";
 import { toast } from "react-toastify";
 
 const ProductCard = ({ product, setSelectedProduct, selectedProduct }) => {
-    const [isSelected, setIsSelected] = useState(selectedProduct.some(p => p.id === product.id));
+    const isSelected = selectedProduct.some(p => p.id === product.id);
 
     let badgeStyle;
 
@@ -19,7 +18,6 @@ const ProductCard = ({ product, setSelectedProduct, selectedProduct }) => {
     const handleProductSelect = () => {
         if (!isSelected) {
             setSelectedProduct([...selectedProduct, product]);
-            setIsSelected(true);
             toast.success("Item added to cart!");
             return;
         }

@@ -4,7 +4,7 @@ import Play from '../assets/Play.png'
 
 const Banner = () => {
     return (
-        <div className="relative min-h-162.5 flex items-center container mx-auto">
+        <div className="relative min-h-162.5 mt-16 flex items-center container mx-auto">
             <div className="mx-auto grid grid-cols-1 my-16 lg:my-0 lg:grid-cols-2 gap-10 items-center relative z-10">
                 {/* Left Content */}
                 <div className="space-y-4 lg:text-left text-center">

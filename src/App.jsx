@@ -11,16 +11,14 @@ import { ToastContainer } from "react-toastify"
 
 function App() {
   const [selectedProduct, setSelectedProduct] = useState([]);
+  const [selectedTab, setSelectedTab] = useState("Products");
 
-  const productPromise = async () => {
-    const res = await fetch('/products.json');
-    return res.json();
-  }
+  const [productPromise] = useState(() => fetch('/products.json').then(res => res.json()));
 
   return (
     <>
       <header>
-        <Navbar selectedProduct={selectedProduct} />
+        <Navbar selectedProduct={selectedProduct} setSelectedTab={setSelectedTab} />
       </header>
 
       <main>
@@ -28,7 +26,7 @@ function App() {
         <Stats />
 
         <Suspense fallback={
-          <div className="flex justify-center items-center py-16">
+          <div className="flex justify-center items-center py-56">
             <div className="flex w-52 flex-col gap-4">
               <div className="skeleton h-32 w-full"></div>
               <div className="skeleton h-4 w-28"></div>
@@ -36,7 +34,7 @@ function App() {
               <div className="skeleton h-4 w-full"></div>
             </div>
           </div>}>
-          <Digitools productPromise={productPromise()} selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} />
+          <Digitools productPromise={productPromise} selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         </Suspense>
 
         <Steps />
