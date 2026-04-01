@@ -1,16 +1,19 @@
-# React + Vite
+# DigiTools Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+A simple and easy-to-use web platform to find and explore the best digital tools like premium AI tools, design assets, templates, productivity software, and many more. Whether you are looking for helpful software for your business or trying to improve your daily workflow, our platform brings everything together in one place. You can discover and purchase digital tools tailored to your specific needs. Also, you can manage your added items from the shopping cart.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technology I've Used
 
-## React Compiler
+- React.js
+- Vite
+- Tailwind CSS
+- DaisyUI
+- React-Toastify (NPM Package)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 3 Features About My Project
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Browse and discover a wide variety of helpful digital tools.
+2. View clear and simple pricing plans for different products.
+3. Manage added items with an easy-to-use shopping cart.
