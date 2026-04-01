@@ -11,7 +11,7 @@ import { ToastContainer } from "react-toastify"
 
 function App() {
   const productPromise = async () => {
-    const res = await fetch('/public/products.json');
+    const res = await fetch('/products.json');
     return res.json();
   }
 
