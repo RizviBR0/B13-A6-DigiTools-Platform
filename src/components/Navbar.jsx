@@ -1,6 +1,6 @@
 const Navbar = ({ selectedProduct, setSelectedTab }) => {
     return (
-        <div className='fixed w-full top-0 z-50 border-b border-[#F2F2F2] bg-white'>
+        <div className='fixed w-full top-0 z-50 border-b border-[#F2F2F2] bg-white shadow-lg shadow-gray-400/10'>
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
