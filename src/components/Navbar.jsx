@@ -63,7 +63,7 @@ const Navbar = ({ selectedProduct, setSelectedTab }) => {
                     </div>
 
                     <a className="btn btn-ghost font-semibold rounded-full hidden sm:flex">Login</a>
-                    <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-white hidden sm:flex">Get in Touch</a>
+                    <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-white hidden sm:flex">Get Started</a>
                 </div>
             </div>
         </div>
