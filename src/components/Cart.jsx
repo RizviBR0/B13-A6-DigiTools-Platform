@@ -26,7 +26,7 @@ const Cart = ({ selectedProduct, setSelectedProduct }) => {
 
             <ul className='space-y-4'>
                 {selectedProduct.map((product) =>
-                    <li key={product.id} className='flex justify-center items-center p-5 bg-[#F9FAFC] rounded-2xl gap-4'>
+                    <li key={product.id} className='flex sm:flex-row flex-col justify-center items-start sm:items-center p-5 bg-[#F9FAFC] rounded-2xl gap-4'>
                         <div className='bg-white border border-[#F2F2F2] rounded-full p-3'>
                             <img className='w-8 h-8' src={product.icon} alt={product.name} />
                         </div>
@@ -37,7 +37,7 @@ const Cart = ({ selectedProduct, setSelectedProduct }) => {
                         </div>
 
                         <button
-                            className='text-[#FF3980] font-bold btn btn-ghost rounded-full'
+                            className='text-[#FF3980] sm:w-fit w-full font-bold btn sm:btn-ghost rounded-full'
                             onClick={() => handleRemoveProduct(product.id)}
                         >
                             Remove
