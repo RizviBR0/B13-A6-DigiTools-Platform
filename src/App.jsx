@@ -10,10 +10,13 @@ import { Suspense, useState } from "react"
 import { ToastContainer } from "react-toastify"
 
 function App() {
+  const productPromise = async () => {
+    const res = await fetch('/public/products.json');
+    return res.json();
+  }
+
   const [selectedProduct, setSelectedProduct] = useState([]);
   const [selectedTab, setSelectedTab] = useState("Products");
-
-  const [productPromise] = useState(() => fetch('/products.json').then(res => res.json()));
 
   return (
     <>
@@ -34,7 +37,7 @@ function App() {
               <div className="skeleton h-4 w-full"></div>
             </div>
           </div>}>
-          <Digitools productPromise={productPromise} selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+          <Digitools productPromise={productPromise()} selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         </Suspense>
 
         <Steps />

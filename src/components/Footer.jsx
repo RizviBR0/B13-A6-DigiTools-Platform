@@ -4,7 +4,7 @@ import { RiInstagramFill, RiTwitterXFill } from "react-icons/ri";
 const Footer = () => {
     return (
         <div className="bg-[#101727] border-t border-red-900/50 pt-16 pb-10">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     {/* Logo & Description */}
                     <div className="lg:col-span-4">
